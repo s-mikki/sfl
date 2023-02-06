@@ -1,0 +1,40 @@
+.body-container {
+    margin: 0 auto;
+    width: 1920px;
+    height: 140px;
+    background-color: #1B3F86;
+    background-image: url("/img/background-body.png");
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 200px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+.navigation__list {
+    display: flex;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    padding-left: 200px;
+}
+
+.navigation__link {
+    font-size: 20px;
+    color: white;
+}
