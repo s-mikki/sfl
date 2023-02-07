@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "Unbounded";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local('Unbounded Regular'), local('Unbounded-Regular'),
+  url("/fonts/unbounded-regular.woff2") format("woff2"),
+  url("/fonts/unbounded-regular.woff") format("woff"),
+  url("/fonts/unbounded-regular.ttf") format("ttf");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #ffffff;
+  --white-opacity: 255, 255, 255;
+  --black: #000000;
+  --black-opacity: 0, 0, 0;
+  --blue: #1B3F86;
+}
+
+/* применение var(--white); */
+
+.visually-hidden:not(:focus):not(active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--white);
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: initial;
+  cursor: pointer;
+  font-family: "Unbounded", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--white);
+}
+
+input {
+  outline: none;
+  font-family: "Unbounded", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--white);
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  margin: 0 0 10px 10px;
+}
+
+html.fixed-safari {
+  height: calc(100vh + 80px);
+  overflow: hidden;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html.fixed-safari::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+body.fixed-safari {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body.fixed-safari::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+body.fixed {
+  overflow: hidden;
+}
+
+.body__container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  max-width: 1920px;
+  font-family: "Unbounded", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--white);
+  background-color: var(--blue);
+  background-image: url("/img/background-body.png");
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 140px;
+  padding: 20px 80px;
+  gap: 240px;
+  max-width: 1305px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.navigation__list {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+}
+
+.navigation__link {
+  display: flex;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 15px 10px;
+}
