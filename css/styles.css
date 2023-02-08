@@ -4,9 +4,31 @@
   font-style: normal;
   font-display: swap;
   src: local('Unbounded Regular'), local('Unbounded-Regular'),
-  url("/fonts/unbounded-regular.woff2") format("woff2"),
-  url("/fonts/unbounded-regular.woff") format("woff"),
-  url("/fonts/unbounded-regular.ttf") format("ttf");
+  url("../fonts/unbounded-regular.woff2") format("woff2"),
+  url("../fonts/unbounded-regular.woff") format("woff"),
+  url("../fonts/unbounded-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Unbounded";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: local('Unbounded Medium'), local('Unbounded-Medium'),
+  url("../fonts/unbounded-medium.woff2") format("woff2"),
+  url("../fonts/unbounded-medium.woff") format("woff"),
+  url("../fonts/unbounded-medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Unbounded";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local('Unbounded Bold'), local('Unbounded-Bold'),
+  url("../fonts/unbounded-bold.woff2") format("woff2"),
+  url("../fonts/unbounded-bold.woff") format("woff"),
+  url("../fonts/unbounded-bold.ttf") format("ttf");
 }
 
 html {
@@ -138,7 +160,11 @@ body.fixed {
   line-height: 18px;
   color: var(--white);
   background-color: var(--blue);
-  background-image: url("/img/background-body.png");
+}
+
+.body__container:after {
+  background-image: url("../img/background-container.svg ");
+  z-index: 9999;
 }
 
 .header {
@@ -157,6 +183,7 @@ body.fixed {
   display: flex;
   gap: 30px;
   align-items: center;
+  text-transform: uppercase;
 }
 
 .logo {
@@ -168,4 +195,9 @@ body.fixed {
   font-size: 20px;
   line-height: 24px;
   padding: 15px 10px;
+  font-weight: 500;
+}
+
+.navigation__item--active .navigation__link {
+  font-weight: 700;
 }

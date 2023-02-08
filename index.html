@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Футбол в школе</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body class="body">
 <div class="body__container">
     <header class="header">
         <nav class="navigation">
             <ul class="navigation__list">
-                <li class="navigation__item">
+                <li class="navigation__item navigation__item--active">
                     <a class="navigation__link" href="#">О портале</a>
                 </li>
                 <li class="navigation__item">
@@ -23,11 +23,28 @@
             </ul>
         </nav>
         <a class="logo" href="#">
-            <img class="logo__image" src="img/logo.svg" width="100" height="100" alt="герб">
+            <img class="logo__image" src="img/logo.svg" width="100" height="100" alt="логотип">
         </a>
     </header>
     <main>
-
+        <div class="main__container">
+            <div class="form_registration">
+                <h2 class="active">Вход</h2>
+                <h2 class="nonactive">Регистрация</h2>
+                <form class="form_registration">
+                    <h2>Вход в личный кабинет</h2>
+                    <input type="text" name="E-mail*">
+                    <span class="text">E-mail</span>
+                    <input type="password" name="password">
+                    <span class="text">Введите пароль</span>
+                    <input class="custom_checkbox" type="checkbox" id="checkbox_1_1" checked>
+                    <label for="checkbox_1_1">Запомнить меня</label>
+                    <a class="password" href="#">Забыли пароль?</a>
+                    <button class="sign-in">Войти</button>
+                    <p>Ещё нет аккаунта?<a class="registration" href="#">Регистрация</a></p>
+                </form>
+            </div>
+        </div>
     </main>
 </div>
 </body>
