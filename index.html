@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Футбол в школе</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="body">
 <div class="body__container">
@@ -28,21 +28,34 @@
     </header>
     <main>
         <div class="main__container">
-            <div class="form_registration">
-                <h2 class="active">Вход</h2>
-                <h2 class="nonactive">Регистрация</h2>
-                <form class="form_registration">
-                    <h2>Вход в личный кабинет</h2>
-                    <input type="text" name="E-mail*">
-                    <span class="text">E-mail</span>
-                    <input type="password" name="password">
-                    <span class="text">Введите пароль</span>
-                    <input class="custom_checkbox" type="checkbox" id="checkbox_1_1" checked>
-                    <label for="checkbox_1_1">Запомнить меня</label>
-                    <a class="password" href="#">Забыли пароль?</a>
-                    <button class="sign-in">Войти</button>
-                    <p>Ещё нет аккаунта?<a class="registration" href="#">Регистрация</a></p>
+            <div class="main__img">
+                <img src="/img/image_children.png" width="790" height="570" alt="дети в футболе">
+            </div>
+            <div class="main__form">
+                <div class="active_nonactive">
+                    <label class="active">Вход</label>
+                    <label class="nonactive">Регистрация</label>
+                </div>
+                <form class="form__entry">
+                    <h2 class="form_title">Вход в личный кабинет</h2>
+                    <div class="form__mail">
+                        <label class="form__text" for="E-mail">E-mail*</label>
+                        <input class="form__input" type="text" id="E-mail" name="E-mail *" required>
+                    </div>
+                    <div class="form__registration">
+                        <label class="form__text" for="password">Введите пароль*</label>
+                        <input class="form__input" type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form__forgot">
+                        <label class="remember" for="checkbox_1_1"><input class="custom_checkbox" type="checkbox"
+                                                                          id="checkbox_1_1" checked>Запомнить
+                            меня</label>
+                        <a class="help_forgot" href="#">Забыли пароль?</a>
+                    </div>
+                    <button class="sign_in">Войти</button>
+                    <p class="slogan">Ещё нет аккаунта? <a class="help_forgot" href="#">Регистрация</a></p>
                 </form>
+                <a class="form__mailto" href="mailto:support@rfs.ru"><img src="/img/post.svg">support@rfs.ru</a>
             </div>
         </div>
     </main>

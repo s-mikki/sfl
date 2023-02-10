@@ -31,6 +31,50 @@
   url("../fonts/unbounded-bold.ttf") format("ttf");
 }
 
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local('Inter Regular'), local('Inter-Regular'),
+  url("../fonts/inter-regular.woff2") format("woff2"),
+  url("../fonts/inter-regular.woff") format("woff"),
+  url("../fonts/inter-regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: local('Inter SemiBold'), local('Inter-SemiBold'),
+  url("../fonts/inter-semibold.woff2") format("woff2"),
+  url("../fonts/inter-semibold.woff") format("woff"),
+  url("../fonts/inter-semibold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: local('Rubik Medium'), local('Rubik-Medium'),
+  url("../fonts/rubik-medium.woff2") format("woff2"),
+  url("../fonts/rubik-medium.woff") format("woff"),
+  url("../fonts/rubik-medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: local('OpenSans SemiBold'), local('OpenSans-SemiBold'),
+  url("../fonts/opensans-semibold.woff2") format("woff2"),
+  url("../fonts/opensans-semibold.woff") format("woff"),
+  url("../fonts/opensans-semibold.ttf") format("ttf");
+}
+
 html {
   box-sizing: border-box;
 }
@@ -99,7 +143,6 @@ input {
 }
 
 img {
-  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -186,10 +229,6 @@ body.fixed {
   text-transform: uppercase;
 }
 
-.logo {
-  display: flex;
-}
-
 .navigation__link {
   display: flex;
   font-size: 20px;
@@ -200,4 +239,162 @@ body.fixed {
 
 .navigation__item--active .navigation__link {
   font-weight: 700;
+}
+
+.main__container {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1305px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.active_nonactive {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 15px;
+}
+
+.active {
+  width: 70px;
+  height: 40px;
+  font-family: 'Open Sans', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  color: #203975;
+  background: #0AD9B3;
+  border-radius: 0px;
+  padding: 10px;
+}
+
+.nonactive {
+  width: 150px;
+  height: 40px;
+  font-family: 'Rubik', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+}
+
+.form__entry {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 350px;
+  height: 370px;
+  padding: 20px 25px;
+  gap: 20px;
+  background: #FFFFFF;
+  border: 1px solid #0AD9B3;
+  border-radius: 0;
+  color: #2A2F2F;
+}
+
+.form_title {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Unbounded", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+  width: 300px;
+  height: 25px;
+}
+
+.form__text {
+  font-family: 'Inter', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.form__mail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 5px;
+}
+
+.form__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 20px;
+  gap: 10px;
+  background: #FFFFFF;
+  color: #0A0A0A;
+  border: 1px solid #0A0A0A;
+  width: 300px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.form__forgot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  width: 300px;
+  height: 19px;
+  font-family: 'Inter', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.sign_in {
+  margin-left: 50px;
+  width: 200px;
+  height: 40px;
+  padding: 10px 30px;
+  background: #0AD9B3;
+  color: #203975;
+}
+
+.help_forgot {
+  text-decoration: underline;
+  font-family: 'Inter', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #0AD9B3;
+}
+
+.slogan {
+  font-family: 'Inter', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  margin-left: 55px;
+  color: #2A2F2F;
+}
+
+.form__mailto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 132px;
+  height: 22px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
 }
