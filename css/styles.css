@@ -143,6 +143,7 @@ input {
 }
 
 img {
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -237,11 +238,15 @@ body.fixed {
   font-weight: 500;
 }
 
+.logo {
+  display: flex;
+}
+
 .navigation__item--active .navigation__link {
   font-weight: 700;
 }
 
-.main__container {
+.promo {
   display: flex;
   justify-content: flex-start;
   max-width: 1305px;
@@ -249,7 +254,7 @@ body.fixed {
   width: 100%;
 }
 
-.active_nonactive {
+.promo__buttons {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -257,7 +262,7 @@ body.fixed {
   gap: 15px;
 }
 
-.active {
+.promo__buttons .promo__button--active {
   width: 70px;
   height: 40px;
   font-family: 'Open Sans', "Arial", sans-serif;
@@ -271,7 +276,7 @@ body.fixed {
   padding: 10px;
 }
 
-.nonactive {
+.promo__button {
   width: 150px;
   height: 40px;
   font-family: 'Rubik', "Arial", sans-serif;
@@ -283,7 +288,7 @@ body.fixed {
   padding: 10px;
 }
 
-.form__entry {
+.form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -297,7 +302,7 @@ body.fixed {
   color: #2A2F2F;
 }
 
-.form_title {
+.form__title {
   display: flex;
   align-items: center;
   text-align: center;
@@ -318,14 +323,6 @@ body.fixed {
   line-height: 15px;
 }
 
-.form__mail {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0;
-  gap: 5px;
-}
-
 .form__input {
   display: flex;
   flex-direction: row;
@@ -340,7 +337,7 @@ body.fixed {
   box-sizing: border-box;
 }
 
-.form__forgot {
+.form__flex {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -355,16 +352,32 @@ body.fixed {
   line-height: 15px;
 }
 
-.sign_in {
-  margin-left: 50px;
-  width: 200px;
-  height: 40px;
-  padding: 10px 30px;
-  background: #0AD9B3;
-  color: #203975;
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
 }
 
-.help_forgot {
+.checkbox__input {
+  display: none;
+}
+
+.checkbox__indicator {
+  flex-shrink: 0;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+}
+
+.checkbox__input:checked + .checkbox__indicator {
+  background-image: url("../img/check.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form__forget {
   text-decoration: underline;
   font-family: 'Inter', "Arial", sans-serif;
   font-style: normal;
@@ -374,7 +387,16 @@ body.fixed {
   color: #0AD9B3;
 }
 
-.slogan {
+.button {
+  margin-left: 50px;
+  width: 200px;
+  height: 40px;
+  padding: 10px 30px;
+  background: #0AD9B3;
+  color: #203975;
+}
+
+.form__slogan {
   font-family: 'Inter', "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -384,15 +406,15 @@ body.fixed {
   color: #2A2F2F;
 }
 
-.form__mailto {
+.promo__mail {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
+  padding: 0;
   gap: 10px;
   width: 132px;
   height: 22px;
-  font-family: 'Inter';
+  font-family: 'Inter', "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;

@@ -26,38 +26,43 @@
             <img class="logo__image" src="img/logo.svg" width="100" height="100" alt="логотип">
         </a>
     </header>
-    <main>
-        <div class="main__container">
-            <div class="main__img">
-                <img src="/img/image_children.png" width="790" height="570" alt="дети в футболе">
-            </div>
-            <div class="main__form">
-                <div class="active_nonactive">
-                    <label class="active">Вход</label>
-                    <label class="nonactive">Регистрация</label>
+    <main class="main">
+        <section class="promo">
+            <img class="promo__img" src="/img/image_children.png" width="790" height="568" alt="дети в футболе">
+            <div class="promo__form">
+                <div class="promo__buttons">
+                    <label class="promo__button promo__button--active">Вход</label>
+                    <label class="promo__button">Регистрация</label>
                 </div>
-                <form class="form__entry">
-                    <h2 class="form_title">Вход в личный кабинет</h2>
-                    <div class="form__mail">
-                        <label class="form__text" for="E-mail">E-mail*</label>
-                        <input class="form__input" type="text" id="E-mail" name="E-mail *" required>
+                <form class="form">
+                    <h2 class="form__title">Вход в личный кабинет</h2>
+                    <div class="form__group">
+                        <label class="form__text" for="e-mail">E-mail*</label>
+                        <input class="form__input" type="text" id="e-mail" name="e-mail *" required>
                     </div>
-                    <div class="form__registration">
+                    <div class="form__group">
                         <label class="form__text" for="password">Введите пароль*</label>
                         <input class="form__input" type="password" id="password" name="password" required>
                     </div>
-                    <div class="form__forgot">
-                        <label class="remember" for="checkbox_1_1"><input class="custom_checkbox" type="checkbox"
-                                                                          id="checkbox_1_1" checked>Запомнить
-                            меня</label>
-                        <a class="help_forgot" href="#">Забыли пароль?</a>
+                    <div class="form__flex">
+                        <div class="form__group">
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__indicator"></span>
+                                <span class="checkbox__label">Запомнить меня</span>
+                            </label>
+                        </div>
+                        <a class="form__forget" href="#">Забыли пароль?</a>
                     </div>
-                    <button class="sign_in">Войти</button>
-                    <p class="slogan">Ещё нет аккаунта? <a class="help_forgot" href="#">Регистрация</a></p>
+                    <button class="button">Войти</button>
+                    <p class="form__slogan">Ещё нет аккаунта? <a class="form__forget" href="#">Регистрация</a></p>
                 </form>
-                <a class="form__mailto" href="mailto:support@rfs.ru"><img src="/img/post.svg">support@rfs.ru</a>
+                <a class="promo__mail" href="mailto:support@rfs.ru">
+                    <img class="promo__icon" src="/img/post.svg" width="21" height="16" alt="почта">
+                    <p class="promo__text">support@rfs.ru</p>
+                </a>
             </div>
-        </div>
+        </section>
     </main>
 </div>
 </body>
