@@ -44,7 +44,7 @@
                         <label class="form__text" for="password">Введите пароль*</label>
                         <input class="form__input" type="password" id="password" name="password" required>
                     </div>
-                    <div class="form__flex">
+                    <div class="form__flex_checked">
                         <div class="form__group">
                             <label class="checkbox">
                                 <input class="checkbox__input" type="checkbox">
@@ -56,6 +56,63 @@
                     </div>
                     <button class="button">Войти</button>
                     <p class="form__slogan">Ещё нет аккаунта? <a class="form__forget" href="#">Регистрация</a></p>
+                </form>
+                <a class="promo__mail" href="mailto:support@rfs.ru">
+                    <img class="promo__icon" src="/img/post.svg" width="21" height="16" alt="почта">
+                    <p class="promo__text">support@rfs.ru</p>
+                </a>
+            </div>
+        </section>
+        <section class="promo">
+            <img class="promo__img" src="/img/image_children.png" width="790" height="568" alt="дети в футболе">
+            <div class="promo__form">
+                <div class="promo__buttons">
+                    <label class="promo__button ">Вход</label>
+                    <label class="promo__button promo__button--active">Регистрация</label>
+                </div>
+                <form class="form__registration">
+                    <h2 class="form__title">Регистрация</h2>
+                    <div class="form__flex">
+                        <div class="form__grid">
+                            <div class="grid">
+                                <div class="form__group__registration">
+                                    <label class="form__text" for="reg-mail">E-mail*</label>
+                                    <input class="form__input" type="text" id="reg-mail" name="e-mail *" required>
+                                </div>
+                                <div class="form__group__registration">
+                                    <label class="form__text" for="name">Имя*</label>
+                                    <input class="form__input" type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form__group__registration">
+                                    <label class="form__text" for="new-password">Пароль*</label>
+                                    <input class="form__input" type="password" id="new-password" name="password" required>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="form__group__registration">
+                                    <label class="form__text" for="username">Фамилия*</label>
+                                    <input class="form__input" type="text" id="username" name="username" required>
+                                </div>
+                                <div class="form__group__registration">
+                                    <label class="form__text" for="patronymic">Отчество*</label>
+                                    <input class="form__input" type="text" id="patronymic" name="patronymic" required>
+                                </div>
+                                <div class="form__group__registration">
+                                    <label class="form__text" for="confirmation">Подтвердите пароль*</label>
+                                    <input class="form__input" type="password" id="confirmation" name="confirmation"
+                                           required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="form__subtitle">Не менее 8 символов, только латинские буквы, минимум 1 заглавная <br>буква,
+                        1 цифра</p>
+                    <p class="form__agreement">Нажимая кнопку “Зарегистрироваться”, Вы принимаете условия <a
+                            class="agreement">Пользовательского соглашения</a> и <a class="agreement">Политики
+                        конфиденциальности</a>
+                    </p>
+                    <button class="button">Зарегистрироваться</button>
+                    <p class="form__slogan">Уже есть аккаунт? <a class="form__forget" href="#">Войти</a></p>
                 </form>
                 <a class="promo__mail" href="mailto:support@rfs.ru">
                     <img class="promo__icon" src="/img/post.svg" width="21" height="16" alt="почта">

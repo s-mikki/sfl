@@ -75,6 +75,17 @@
   url("../fonts/opensans-semibold.ttf") format("ttf");
 }
 
+@font-face {
+  font-family: "Inter";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: local('Inter LightBETA'), local('Inter-LightBETA'),
+  url("../fonts/inter-lightbETA.woff2") format("woff2"),
+  url("../fonts/inter-lightbETA.woff") format("woff"),
+  url("../fonts/inter-lightbETA.ttf") format("ttf");
+}
+
 html {
   box-sizing: border-box;
 }
@@ -263,8 +274,6 @@ body.fixed {
 }
 
 .promo__buttons .promo__button--active {
-  width: 70px;
-  height: 40px;
   font-family: 'Open Sans', "Arial", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -272,13 +281,11 @@ body.fixed {
   line-height: 20px;
   color: #203975;
   background: #0AD9B3;
-  border-radius: 0px;
+  border-radius: 0;
   padding: 10px;
 }
 
 .promo__button {
-  width: 150px;
-  height: 40px;
   font-family: 'Rubik', "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -291,7 +298,7 @@ body.fixed {
 .form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 350px;
   height: 370px;
   padding: 20px 25px;
@@ -303,16 +310,13 @@ body.fixed {
 }
 
 .form__title {
-  display: flex;
-  align-items: center;
   text-align: center;
   text-transform: uppercase;
   font-family: "Unbounded", "Arial", sans-serif;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 25px;
-  width: 300px;
-  height: 25px;
+  color: #2A2F2F;
 }
 
 .form__text {
@@ -337,7 +341,7 @@ body.fixed {
   box-sizing: border-box;
 }
 
-.form__flex {
+.form__flex_checked {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -388,12 +392,16 @@ body.fixed {
 }
 
 .button {
-  margin-left: 50px;
-  width: 200px;
-  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   padding: 10px 30px;
+  gap: 5px;
   background: #0AD9B3;
   color: #203975;
+  width: 200px;
+  height: 40px;
 }
 
 .form__slogan {
@@ -402,7 +410,7 @@ body.fixed {
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
-  margin-left: 55px;
+  text-align: center;
   color: #2A2F2F;
 }
 
@@ -419,4 +427,95 @@ body.fixed {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
+}
+
+.form__registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 25px;
+  gap: 10px;
+  width: 460px;
+  height: 450px;
+  background: #FFFFFF;
+  border: 1px solid #0AD9B3;
+  border-radius: 0;
+  color: #2A2F2F;
+}
+
+.form__flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 20px;
+  width: 410px;
+  height: 200px;
+}
+
+.form__grid {
+  display: flex;
+  gap: 10px;
+}
+
+.form__group__registration {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 2px;
+  isolation: isolate;
+  width: 200px;
+  height: 57px;
+}
+
+.form__group__registration .form__text {
+  font-family: 'Inter', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  color: #2A2F2F;
+}
+
+.form__group__registration .form__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
+  width: 200px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid #2A2F2F;
+}
+
+.form__registration .button {
+  width: 280px;
+  height: 40px
+}
+
+.form__subtitle {
+  font-family: 'Inter', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  height: 30px;
+  color: #2A2F2F;
+  width: 410px;
+}
+
+.form__agreement {
+  font-family: 'Inter', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #2A2F2F;
+}
+.agreement {
+  text-decoration: underline;
+  color: #203975;
 }
