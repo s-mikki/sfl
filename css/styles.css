@@ -60,9 +60,9 @@
   font-style: normal;
   font-display: swap;
   src: local('Inter LightBETA'), local('Inter-LightBETA'),
-  url("../fonts/inter-lightbETA.woff2") format("woff2"),
-  url("../fonts/inter-lightbETA.woff") format("woff"),
-  url("../fonts/inter-lightbETA.ttf") format("ttf");
+  url("../fonts/inter-lightbeta.woff2") format("woff2"),
+  url("../fonts/inter-lightbeta.woff") format("woff"),
+  url("../fonts/inter-lightbeta.ttf") format("ttf");
 }
 
 @font-face {
@@ -398,9 +398,14 @@ body.fixed {
   color: var(--green-blue);
 }
 
+.form__button {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .button {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 10px 30px;
@@ -431,17 +436,22 @@ body.fixed {
 }
 
 .form--registration {
-  gap: 10px;
+  gap: 20px;
 }
 
 .form__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
 }
 
 .form__group {
-
   width: 100%;
 }
 
@@ -450,18 +460,23 @@ body.fixed {
   height: 40px
 }
 
+.grid__subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-
-.form__subtitle {
+.subtitle {
   font-family: 'Inter', "Arial", sans-serif;
   font-weight: 300;
   font-size: 12px;
   line-height: 15px;
+  width: 410px;
   height: 30px;
   color: var(--dark-light);
 }
 
-.form__text {
+.text {
   font-family: 'Inter', "Arial", sans-serif;
   font-weight: 300;
   font-size: 10px;
@@ -511,5 +526,5 @@ body.fixed {
 }
 
 .promo__img2 {
-  background-image: url("../img/image_children_footbal.png");
+  background-image: url("../img/image-children-footbal.png");
 }
