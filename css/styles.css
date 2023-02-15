@@ -111,7 +111,7 @@ html {
   --blue: #1B3F86;
   --pale-blue: #203975;
   --green-blue: #0AD9B3;
-  --dark-light: #2A2F2F;
+  --dark: #2A2F2F;
 }
 
 /* применение var(--white); */
@@ -265,17 +265,23 @@ body.fixed {
 .main {
   display: flex;
   flex-direction: column;
-  gap: 240px;
   max-width: 1305px;
   margin: 0 auto;
   width: 100%;
+  padding: 0 30px;
 }
 
+.promo__form {
+  width: 350px;
+}
+
+.promo__form-registration {
+  width: 460px;
+}
 .promo {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
   margin: 0 auto;
   width: 100%;
 }
@@ -290,7 +296,7 @@ body.fixed {
   font-family: 'Open Sans', "Arial", sans-serif;
   font-weight: 600;
   color: var(--pale-blue);
-  background: var(--green-blue);
+  background-color: var(--green-blue);
   padding: 10px;
 }
 
@@ -308,9 +314,9 @@ body.fixed {
   align-items: center;
   padding: 20px 25px;
   gap: 20px;
-  background: var(--white);
+  background-color: var(--white);
   border: 1px solid var(--green-blue);
-  color: var(--dark-light);
+  color: var(--dark);
 }
 
 .form__title {
@@ -320,7 +326,7 @@ body.fixed {
   font-weight: 500;
   font-size: 18px;
   line-height: 25px;
-  color: var(--dark-light);
+  color: var(--dark);
 }
 
 .form__label {
@@ -332,8 +338,7 @@ body.fixed {
 
 .form__input {
   padding: 5px 20px;
-  margin-top: 5px;
-  background: var(--white);
+  background-color: var(--white);
   color: var(--black);
   border: 1px solid var(--black);
   width: 100%;
@@ -368,8 +373,10 @@ body.fixed {
 .checkbox__indicator {
   flex-shrink: 0;
   position: relative;
-  width: 22px;
+  width: 20px;
   height: 20px;
+  border: 1px solid var(--black);
+  z-index: 1;
 }
 
 .checkbox__input:checked + .checkbox__indicator {
@@ -378,15 +385,6 @@ body.fixed {
   background-position-x: 4px;
   background-position-y: 2px;
   z-index: 2;
-}
-
-.checkbox__indicator2 {
-  flex-shrink: 0;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border: 1px solid var(--black);
-  z-index: 1;
 }
 
 .form__link-reset {
@@ -410,7 +408,7 @@ body.fixed {
   align-items: center;
   padding: 10px 30px;
   gap: 5px;
-  background: var(--green-blue);
+  background-color: var(--green-blue);
   color: var(--pale-blue);
   min-width: 200px;
 }
@@ -421,44 +419,39 @@ body.fixed {
   font-size: 12px;
   line-height: 15px;
   text-align: center;
-  color: var(--dark-light);
+  color: var(--dark);
 }
 
 .promo__mail {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding-top: 10px;
+  padding: 10px 0 0 0;
   font-family: 'Inter', "Arial", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
 }
 
-.form--registration {
-  gap: 20px;
-}
-
-.form__grid {
+.form__group {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.grid {
+.form__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
 }
 
-.form__group {
+.grid__group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   width: 100%;
 }
 
-.form__registration .button {
-  width: 280px;
-  height: 40px
-}
 
 .grid__subtitle {
   display: flex;
@@ -466,23 +459,23 @@ body.fixed {
   gap: 10px;
 }
 
-.subtitle {
+.form__subtitle {
   font-family: 'Inter', "Arial", sans-serif;
   font-weight: 300;
   font-size: 12px;
   line-height: 15px;
-  width: 410px;
+  width: 100%;
   height: 30px;
-  color: var(--dark-light);
+  color: var(--dark);
 }
 
-.text {
+.form__text {
   font-family: 'Inter', "Arial", sans-serif;
   font-weight: 300;
   font-size: 10px;
   line-height: 14px;
   text-align: center;
-  color: var(--dark-light);
+  color: var(--dark);
 }
 
 .form__link {
@@ -526,5 +519,5 @@ body.fixed {
 }
 
 .promo__img2 {
-  background-image: url("../img/image-children-footbal.png");
+  background-image: url("../img/image-children-.png");
 }

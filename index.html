@@ -49,7 +49,6 @@
                             <label class="checkbox">
                                 <input class="checkbox__input" type="checkbox">
                                 <span class="checkbox__indicator"></span>
-                                <span class="checkbox__indicator2"></span>
                                 <span class="checkbox__label">Запомнить меня</span>
                             </label>
                         </div>
@@ -66,51 +65,48 @@
         </section>
         <section class="promo">
             <img class="promo__img" src="/img/image-children.png" width="790" height="568" alt="дети в футболе">
-            <div class="promo__form">
+            <div class="promo__form promo__form-registration">
                 <div class="promo__buttons">
                     <a class="promo__button ">Вход</a>
                     <a class="promo__button promo__button--active">Регистрация</a>
                 </div>
-                <form class="form form--registration">
+                <form class="form">
                     <h2 class="form__title">Регистрация</h2>
-                    <div class="form__grid">
-                        <div class="grid">
-                            <div class="form__group">
+                    <div class="form__group">
+                        <div class="form__grid">
+                            <div class="grid__group">
                                 <label class="form__label" for="reg-mail">E-mail*</label>
                                 <input class="form__input" type="text" id="reg-mail" name="e-mail *" required>
                             </div>
-                            <div class="form__group">
+                            <div class="grid__group">
                                 <label class="form__label" for="username">Фамилия*</label>
                                 <input class="form__input" type="text" id="username" name="username" required>
                             </div>
-                            <div class="form__group">
+                            <div class="grid__group">
                                 <label class="form__label" for="name">Имя*</label>
                                 <input class="form__input" type="text" id="name" name="name" required>
                             </div>
-                            <div class="form__group">
+                            <div class="grid__group">
                                 <label class="form__label" for="patronymic">Отчество*</label>
                                 <input class="form__input" type="text" id="patronymic" name="patronymic" required>
                             </div>
-                            <div class="form__group">
+                            <div class="grid__group">
                                 <label class="form__label" for="new-password">Пароль*</label>
                                 <input class="form__input" type="password" id="new-password" name="password"
                                        required>
                             </div>
-                            <div class="form__group">
+                            <div class="grid__group">
                                 <label class="form__label" for="confirmation">Подтвердите пароль*</label>
                                 <input class="form__input" type="password" id="confirmation" name="confirmation"
                                        required>
                             </div>
                         </div>
-                        <div class="grid__subtitle">
-                            <p class="subtitle">Не менее 8 символов, только латинские буквы, минимум 1 заглавная <br>буква,
+                            <p class="form__subtitle">Не менее 8 символов, только латинские буквы, минимум 1 заглавная <br>буква,
                                 1 цифра</p>
-                            <p class="text">Нажимая кнопку “Зарегистрироваться”, Вы принимаете условия <a
+                            <p class="form__text">Нажимая кнопку “Зарегистрироваться”, Вы принимаете условия <a
                                     class="form__link">Пользовательского соглашения</a> и <a href="#" class="form__link">Политики
                                 конфиденциальности</a>
-                            </p>
                         </div>
-                    </div>
                     <div class="form__button">
                         <button class="button">Зарегистрироваться</button>
                         <p class="form__slogan">Уже есть аккаунт? <a class="form__link-reset" href="#">Войти</a></p>
