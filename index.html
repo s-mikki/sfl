@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Футбол в школе</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="body">
 <div class="body__container">
@@ -26,25 +26,116 @@
             <img class="logo__image" src="img/logo.svg" width="100" height="100" alt="логотип">
         </a>
     </header>
-    <main>
-        <div class="main__container">
-            <div class="form_registration">
-                <h2 class="active">Вход</h2>
-                <h2 class="nonactive">Регистрация</h2>
-                <form class="form_registration">
-                    <h2>Вход в личный кабинет</h2>
-                    <input type="text" name="E-mail*">
-                    <span class="text">E-mail</span>
-                    <input type="password" name="password">
-                    <span class="text">Введите пароль</span>
-                    <input class="custom_checkbox" type="checkbox" id="checkbox_1_1" checked>
-                    <label for="checkbox_1_1">Запомнить меня</label>
-                    <a class="password" href="#">Забыли пароль?</a>
-                    <button class="sign-in">Войти</button>
-                    <p>Ещё нет аккаунта?<a class="registration" href="#">Регистрация</a></p>
+    <main class="main">
+        <section class="promo">
+            <img class="promo__img" src="/img/image-children.png" width="790" height="568" alt="дети в футболе">
+            <div class="promo__form">
+                <div class="promo__buttons">
+                    <a class="promo__button promo__button--active">Вход</a>
+                    <a class="promo__button">Регистрация</a>
+                </div>
+                <form class="form">
+                    <h2 class="form__title">Вход в личный кабинет</h2>
+                    <div class="form__group">
+                        <label class="form__label" for="e-mail">E-mail*</label>
+                        <input class="form__input" type="text" id="e-mail" name="e-mail *" required>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="password">Введите пароль*</label>
+                        <input class="form__input" type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form__checked">
+                        <div class="form__checkbox">
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__indicator"></span>
+                                <span class="checkbox__label">Запомнить меня</span>
+                            </label>
+                        </div>
+                        <a class="form__link-reset" href="#">Забыли пароль?</a>
+                    </div>
+                    <button class="button">Войти</button>
+                    <p class="form__slogan">Ещё нет аккаунта? <a class="form__link-reset" href="#">Регистрация</a></p>
                 </form>
+                <a class="promo__mail" href="mailto:support@rfs.ru">
+                    <img class="promo__icon" src="/img/post.svg" width="21" height="16" alt="почта">
+                    <p class="promo__text">support@rfs.ru</p>
+                </a>
             </div>
-        </div>
+        </section>
+        <section class="promo">
+            <img class="promo__img" src="/img/image-children.png" width="790" height="568" alt="дети в футболе">
+            <div class="promo__form promo__form-registration">
+                <div class="promo__buttons">
+                    <a class="promo__button ">Вход</a>
+                    <a class="promo__button promo__button--active">Регистрация</a>
+                </div>
+                <form class="form">
+                    <h2 class="form__title">Регистрация</h2>
+                    <div class="form__group">
+                        <div class="form__grid">
+                            <div class="grid__group">
+                                <label class="form__label" for="reg-mail">E-mail*</label>
+                                <input class="form__input" type="text" id="reg-mail" name="e-mail *" required>
+                            </div>
+                            <div class="grid__group">
+                                <label class="form__label" for="username">Фамилия*</label>
+                                <input class="form__input" type="text" id="username" name="username" required>
+                            </div>
+                            <div class="grid__group">
+                                <label class="form__label" for="name">Имя*</label>
+                                <input class="form__input" type="text" id="name" name="name" required>
+                            </div>
+                            <div class="grid__group">
+                                <label class="form__label" for="patronymic">Отчество*</label>
+                                <input class="form__input" type="text" id="patronymic" name="patronymic" required>
+                            </div>
+                            <div class="grid__group">
+                                <label class="form__label" for="new-password">Пароль*</label>
+                                <input class="form__input" type="password" id="new-password" name="password"
+                                       required>
+                            </div>
+                            <div class="grid__group">
+                                <label class="form__label" for="confirmation">Подтвердите пароль*</label>
+                                <input class="form__input" type="password" id="confirmation" name="confirmation"
+                                       required>
+                            </div>
+                        </div>
+                            <p class="form__subtitle">Не менее 8 символов, только латинские буквы, минимум 1 заглавная <br>буква,
+                                1 цифра</p>
+                            <p class="form__text">Нажимая кнопку “Зарегистрироваться”, Вы принимаете условия <a
+                                    class="form__link">Пользовательского соглашения</a> и <a href="#" class="form__link">Политики
+                                конфиденциальности</a>
+                        </div>
+                    <div class="form__button">
+                        <button class="button">Зарегистрироваться</button>
+                        <p class="form__slogan">Уже есть аккаунт? <a class="form__link-reset" href="#">Войти</a></p>
+                    </div>
+                </form>
+                <a class="promo__mail" href="mailto:support@rfs.ru">
+                    <img class="promo__icon" src="/img/post.svg" width="21" height="16" alt="почта">
+                    <p class="promo__text">support@rfs.ru</p>
+                </a>
+            </div>
+        </section>
+        <!--
+        <section class="promo">
+            <div class="promo__portal">
+                <img src="/img/purple_stripe.svg" width="190" height="50" alt="фиолетовая полоса" class="img__stripe">
+                <div class="portal">
+                    <h2 class="portal__title">О портале</h2>
+                    <p class="portal__subtitle">«Футбол в школе» — проект РФС по привлечению
+                        детей и подростков в самый популярный спорт в мире.</p>
+                    <p class="portal__subtitle">У школьников появляется возможность приобщиться к футболу на уроках
+                        физкультуры и в
+                        секциях, участвовать в регулярных турнирах и фестивалях. Школы становятся центрами футбольной жизни
+                        в
+                        своем районе или регионе, а тренеры и специалисты получают больше возможностей заметить талантливых
+                        детей</p>
+                </div>
+                <img class="promo__img2">
+            </div>
+        </section> -->
     </main>
 </div>
 </body>
