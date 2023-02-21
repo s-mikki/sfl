@@ -31,7 +31,6 @@
   url("../fonts/unbounded-regular.ttf") format("ttf");
 }
 
-
 @font-face {
   font-family: "Inter";
   font-weight: 600;
@@ -41,6 +40,17 @@
   url("../fonts/inter-semibold.woff2") format("woff2"),
   url("../fonts/inter-semibold.woff") format("woff"),
   url("../fonts/inter-semibold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: local('Inter Medium'), local('Inter-Medium'),
+  url("../fonts/inter-medium.woff2") format("woff2"),
+  url("../fonts/inter-medium.woff") format("woff"),
+  url("../fonts/inter-medium.ttf") format("ttf");
 }
 
 @font-face {
@@ -59,10 +69,21 @@
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: local('Inter LightBETA'), local('Inter-LightBETA'),
-  url("../fonts/inter-lightbeta.woff2") format("woff2"),
-  url("../fonts/inter-lightbeta.woff") format("woff"),
-  url("../fonts/inter-lightbeta.ttf") format("ttf");
+  src: local('Inter Light'), local('Inter-Light'),
+  url("../fonts/inter-light.woff2") format("woff2"),
+  url("../fonts/inter-light.woff") format("woff"),
+  url("../fonts/inter-light.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: local('OpenSans SemiBold'), local('OpenSans-SemiBold'),
+  url("../fonts/opensans-semibold.woff2") format("woff2"),
+  url("../fonts/opensans-semibold.woff") format("woff"),
+  url("../fonts/opensans-semibold.ttf") format("ttf");
 }
 
 @font-face {
@@ -220,10 +241,7 @@ body.fixed {
   line-height: 18px;
   color: var(--white);
   background-color: var(--blue);
-}
-
-.body__container:after {
-  background-image: url("../img/background-container.svg ");
+  background-image: url("../img/background-body.png ");
   z-index: 9999;
 }
 
@@ -258,7 +276,8 @@ body.fixed {
   display: flex;
 }
 
-.navigation__item--active .navigation__link {
+.navigation__item--active .navigation__link,
+.navigation__link:hover {
   font-weight: 700;
 }
 
@@ -271,19 +290,16 @@ body.fixed {
   padding: 0 30px;
 }
 
-.promo__form {
-  width: 350px;
-}
-
-.promo__form-registration {
-  width: 460px;
-}
 .promo {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin: 0 auto;
   width: 100%;
+}
+
+.promo__img {
+  margin: 0 0 0 -15px;
 }
 
 .promo__buttons {
@@ -292,31 +308,43 @@ body.fixed {
   gap: 15px;
 }
 
-.promo__button--active {
-  font-family: 'Open Sans', "Arial", sans-serif;
-  font-weight: 600;
-  color: var(--pale-blue);
-  background-color: var(--green-blue);
-  padding: 10px;
-}
-
 .promo__button {
   font-family: 'Rubik', "Arial", sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   padding: 10px;
+  transition: 0.3s;
+}
+
+.promo__button--active,
+.promo__button:hover {
+  color: var(--pale-blue);
+  background-color: var(--green-blue);
+  transition: 0.3s;
+}
+
+.promo__button--active {
+  font-family: 'Open Sans', "Arial", sans-serif;
+  font-weight: 600;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-shrink: 0;
   padding: 20px 25px;
   gap: 20px;
+  max-width: 350px;
+  width: 100%;
   background-color: var(--white);
   border: 1px solid var(--green-blue);
   color: var(--dark);
+}
+
+.form--registration {
+  max-width: 460px;
 }
 
 .form__title {
@@ -324,16 +352,19 @@ body.fixed {
   text-transform: uppercase;
   font-family: "Unbounded", "Arial", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 25px;
   color: var(--dark);
 }
 
 .form__label {
   font-family: 'Inter', "Arial", sans-serif;
-  font-weight: 400;
   font-size: 12px;
   line-height: 15px;
+}
+
+.form--registration .form__label {
+  font-size: 10px;
 }
 
 .form__input {
@@ -376,18 +407,15 @@ body.fixed {
   width: 20px;
   height: 20px;
   border: 1px solid var(--black);
-  z-index: 1;
 }
 
-.checkbox__input:checked + .checkbox__indicator {
-  background-image: url("../img/check.svg");
-  background-repeat: no-repeat;
-  background-position-x: 4px;
-  background-position-y: 2px;
-  z-index: 2;
+.checkbox__input:checked + .checkbox__indicator:after {
+  content: url("../img/check.svg");
+  position: absolute;
+  left: 3px;
 }
 
-.form__link-reset {
+.form__sky {
   text-decoration: underline;
   font-family: 'Inter', "Arial", sans-serif;
   font-weight: 600;
@@ -396,7 +424,7 @@ body.fixed {
   color: var(--green-blue);
 }
 
-.form__button {
+.form__column {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -408,6 +436,8 @@ body.fixed {
   align-items: center;
   padding: 10px 30px;
   gap: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
   background-color: var(--green-blue);
   color: var(--pale-blue);
   min-width: 200px;
@@ -415,7 +445,6 @@ body.fixed {
 
 .form__slogan {
   font-family: 'Inter', "Arial", sans-serif;
-  font-weight: 400;
   font-size: 12px;
   line-height: 15px;
   text-align: center;
@@ -426,30 +455,37 @@ body.fixed {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 0 0 0;
+  margin: 10px 0 0;
+}
+
+.promo__text {
   font-family: 'Inter', "Arial", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
 }
 
-.form__group {
+.form__wrap {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.form--registration .form__group {
+  gap: 2px;
 }
 
 .form__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
-}
-
-.grid__group {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 100%;
 }
 
 
@@ -465,7 +501,6 @@ body.fixed {
   font-size: 12px;
   line-height: 15px;
   width: 100%;
-  height: 30px;
   color: var(--dark);
 }
 
@@ -483,41 +518,52 @@ body.fixed {
   color: var(--pale-blue);
 }
 
-/*
-.promo__portal {
+.portal {
   display: flex;
-  flex-direction: column;
 }
 
-.portal {
+.portal__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 55px 0 0 0;
+  max-width: 636px;
+  flex-shrink: 0;
+}
+
+.portal__container {
+  position: relative;
+}
+
+.portal__stripes {
   position: absolute;
-  width: 636px;
-  height: 270px;
+  left: -110px;
+  bottom: 25px;
+  z-index: 1;
 }
 
 .portal__title {
   font-family: 'Unbounded', "Arial", sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 34px;
   line-height: 50px;
   text-transform: uppercase;
-  color: var(--pale-blue);
+  position: relative;
+  z-index: 2;
 }
 
-.img__stripe {
-
+.portal__group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .portal__subtitle {
   font-family: 'Inter', "Arial", sans-serif;
-  font-weight: 400;
   font-size: 18px;
-  line-height: 25px;
-  color: var(--white);
-  margin-top: 15px;
+  line-height: 24px;
 }
 
-.promo__img2 {
-  background-image: url("../img/image-children-.png");
+.portal__img {
+  margin: 0 -50px 0 -90px;
 }

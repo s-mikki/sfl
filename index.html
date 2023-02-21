@@ -28,11 +28,12 @@
     </header>
     <main class="main">
         <section class="promo">
-            <img class="promo__img" src="/img/image-children.png" width="790" height="568" alt="дети в футболе">
+            <h1 class="main__title">Футбол в школе</h1>
+            <img class="promo__img" src="/img/image-children.png" width="785" height="568" alt="дети в футболе">
             <div class="promo__form">
                 <div class="promo__buttons">
                     <a class="promo__button promo__button--active">Вход</a>
-                    <a class="promo__button">Регистрация</a>
+                    <a class="promo__button ">Регистрация</a>
                 </div>
                 <form class="form">
                     <h2 class="form__title">Вход в личный кабинет</h2>
@@ -52,10 +53,10 @@
                                 <span class="checkbox__label">Запомнить меня</span>
                             </label>
                         </div>
-                        <a class="form__link-reset" href="#">Забыли пароль?</a>
+                        <a class="form__sky" href="#">Забыли пароль?</a>
                     </div>
                     <button class="button">Войти</button>
-                    <p class="form__slogan">Ещё нет аккаунта? <a class="form__link-reset" href="#">Регистрация</a></p>
+                    <p class="form__slogan">Ещё нет аккаунта? <a class="form__sky" href="#">Регистрация</a></p>
                 </form>
                 <a class="promo__mail" href="mailto:support@rfs.ru">
                     <img class="promo__icon" src="/img/post.svg" width="21" height="16" alt="почта">
@@ -64,52 +65,47 @@
             </div>
         </section>
         <section class="promo">
-            <img class="promo__img" src="/img/image-children.png" width="790" height="568" alt="дети в футболе">
-            <div class="promo__form promo__form-registration">
+            <img class="promo__img" src="/img/image-children.png" width="785" height="568" alt="дети в футболе">
+            <div class="promo__form">
                 <div class="promo__buttons">
                     <a class="promo__button ">Вход</a>
                     <a class="promo__button promo__button--active">Регистрация</a>
                 </div>
-                <form class="form">
+                <form class="form form--registration">
                     <h2 class="form__title">Регистрация</h2>
-                    <div class="form__group">
+                    <div class="form__wrap">
                         <div class="form__grid">
-                            <div class="grid__group">
+                            <div class="form__group">
                                 <label class="form__label" for="reg-mail">E-mail*</label>
                                 <input class="form__input" type="text" id="reg-mail" name="e-mail *" required>
                             </div>
-                            <div class="grid__group">
+                            <div class="form__group">
                                 <label class="form__label" for="username">Фамилия*</label>
                                 <input class="form__input" type="text" id="username" name="username" required>
                             </div>
-                            <div class="grid__group">
+                            <div class="form__group">
                                 <label class="form__label" for="name">Имя*</label>
                                 <input class="form__input" type="text" id="name" name="name" required>
                             </div>
-                            <div class="grid__group">
+                            <div class="form__group">
                                 <label class="form__label" for="patronymic">Отчество*</label>
                                 <input class="form__input" type="text" id="patronymic" name="patronymic" required>
                             </div>
-                            <div class="grid__group">
+                            <div class="form__group">
                                 <label class="form__label" for="new-password">Пароль*</label>
-                                <input class="form__input" type="password" id="new-password" name="password"
-                                       required>
+                                <input class="form__input" type="password" id="new-password" name="password" required>
                             </div>
-                            <div class="grid__group">
+                            <div class="form__group">
                                 <label class="form__label" for="confirmation">Подтвердите пароль*</label>
-                                <input class="form__input" type="password" id="confirmation" name="confirmation"
-                                       required>
+                                <input class="form__input" type="password" id="confirmation" name="confirmation" required>
                             </div>
                         </div>
-                            <p class="form__subtitle">Не менее 8 символов, только латинские буквы, минимум 1 заглавная <br>буква,
-                                1 цифра</p>
-                            <p class="form__text">Нажимая кнопку “Зарегистрироваться”, Вы принимаете условия <a
-                                    class="form__link">Пользовательского соглашения</a> и <a href="#" class="form__link">Политики
-                                конфиденциальности</a>
-                        </div>
-                    <div class="form__button">
+                        <p class="form__subtitle">Не менее 8 символов, только латинские буквы, минимум 1 заглавная буква, 1 цифра</p>
+                        <p class="form__text">Нажимая кнопку “Зарегистрироваться”, Вы принимаете условия <a class="form__link">Пользовательского соглашения</a> и <a href="#" class="form__link">Политики конфиденциальности</a>
+                    </div>
+                    <div class="form__column">
                         <button class="button">Зарегистрироваться</button>
-                        <p class="form__slogan">Уже есть аккаунт? <a class="form__link-reset" href="#">Войти</a></p>
+                        <p class="form__slogan">Уже есть аккаунт? <a class="form__sky" href="#">Войти</a></p>
                     </div>
                 </form>
                 <a class="promo__mail" href="mailto:support@rfs.ru">
@@ -118,24 +114,19 @@
                 </a>
             </div>
         </section>
-        <!--
-        <section class="promo">
-            <div class="promo__portal">
-                <img src="/img/purple_stripe.svg" width="190" height="50" alt="фиолетовая полоса" class="img__stripe">
-                <div class="portal">
+        <section class="portal">
+            <div class="portal__content">
+                <div class="portal__container">
+                    <img class="portal__stripes" src="/img/purple_stripe.svg" alt="розовая линия">
                     <h2 class="portal__title">О портале</h2>
-                    <p class="portal__subtitle">«Футбол в школе» — проект РФС по привлечению
-                        детей и подростков в самый популярный спорт в мире.</p>
-                    <p class="portal__subtitle">У школьников появляется возможность приобщиться к футболу на уроках
-                        физкультуры и в
-                        секциях, участвовать в регулярных турнирах и фестивалях. Школы становятся центрами футбольной жизни
-                        в
-                        своем районе или регионе, а тренеры и специалисты получают больше возможностей заметить талантливых
-                        детей</p>
                 </div>
-                <img class="promo__img2">
+                <div class="portal__group">
+                    <p class="portal__subtitle">«Футбол в школе» — проект РФС по привлечению детей и подростков в самый популярный спорт в мире.</p>
+                    <p class="portal__subtitle">У школьников появляется возможность приобщиться к футболу на уроках физкультуры и в секциях, участвовать в регулярных турнирах и фестивалях. Школы становятся центрами футбольной жизни в своем районе или регионе, а тренеры и специалисты получают больше возможностей заметить талантливых детей</p>
+                </div>
             </div>
-        </section> -->
+            <img class="portal__img" src="/img/children-football.png" width="742" height="436" alt="дети с мячом">
+        </section>
     </main>
 </div>
 </body>
