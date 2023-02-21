@@ -69,7 +69,7 @@
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: local('Inter LightBETA'), local('Inter-LightBETA'),
+  src: local('Inter Light'), local('Inter-Light'),
   url("../fonts/inter-light.woff2") format("woff2"),
   url("../fonts/inter-light.woff") format("woff"),
   url("../fonts/inter-light.ttf") format("ttf");
@@ -84,50 +84,6 @@
   url("../fonts/opensans-semibold.woff2") format("woff2"),
   url("../fonts/opensans-semibold.woff") format("woff"),
   url("../fonts/opensans-semibold.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Rubik";
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: local('Rubik Medium'), local('Rubik-Medium'),
-  url("../fonts/rubik-medium.woff2") format("woff2"),
-  url("../fonts/rubik-medium.woff") format("woff"),
-  url("../fonts/rubik-medium.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-  src: local('Inter SemiBold'), local('Inter-SemiBold'),
-  url("../fonts/inter-semibold.woff2") format("woff2"),
-  url("../fonts/inter-semibold.woff") format("woff"),
-  url("../fonts/inter-semibold.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: local('Inter Regular'), local('Inter-Regular'),
-  url("../fonts/inter-regular.woff2") format("woff2"),
-  url("../fonts/inter-regular.woff") format("woff"),
-  url("../fonts/inter-regular.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-  src: local('Inter LightBETA'), local('Inter-LightBETA'),
-  url("../fonts/inter-lightbeta.woff2") format("woff2"),
-  url("../fonts/inter-lightbeta.woff") format("woff"),
-  url("../fonts/inter-lightbeta.ttf") format("ttf");
 }
 
 @font-face {
@@ -273,11 +229,6 @@ body.fixed {
 }
 
 .body__container {
-  background-image: url("../img/background-body.png ");
-  z-index: 9999;
-}
-
-.body__container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -290,6 +241,8 @@ body.fixed {
   line-height: 18px;
   color: var(--white);
   background-color: var(--blue);
+  background-image: url("../img/background-body.png ");
+  z-index: 9999;
 }
 
 .header {
@@ -343,6 +296,10 @@ body.fixed {
   align-items: center;
   margin: 0 auto;
   width: 100%;
+}
+
+.promo__img {
+  margin: 0 0 0 -15px;
 }
 
 .promo__buttons {
@@ -402,7 +359,6 @@ body.fixed {
 
 .form__label {
   font-family: 'Inter', "Arial", sans-serif;
-  font-weight: 400;
   font-size: 12px;
   line-height: 15px;
 }
@@ -489,7 +445,6 @@ body.fixed {
 
 .form__slogan {
   font-family: 'Inter', "Arial", sans-serif;
-  font-weight: 400;
   font-size: 12px;
   line-height: 15px;
   text-align: center;
@@ -563,21 +518,24 @@ body.fixed {
   color: var(--pale-blue);
 }
 
-
 .portal {
   display: flex;
-  flex-shrink: 0;
 }
+
 .portal__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 55px 0 0 0;
   max-width: 636px;
   flex-shrink: 0;
 }
 
-.content__img {
+.portal__container {
   position: relative;
 }
 
-.img__stripes {
+.portal__stripes {
   position: absolute;
   left: -110px;
   bottom: 25px;
@@ -589,16 +547,23 @@ body.fixed {
   font-weight: 500;
   font-size: 34px;
   line-height: 50px;
-  color: var(--white);
+  text-transform: uppercase;
   position: relative;
   z-index: 2;
 }
 
+.portal__group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .portal__subtitle {
   font-family: 'Inter', "Arial", sans-serif;
-  font-weight: 400;
   font-size: 18px;
-  line-height: 25px;
-  color: var(--white);
-  margin-top: 15px;
+  line-height: 24px;
+}
+
+.portal__img {
+  margin: 0 -50px 0 -90px;
 }
