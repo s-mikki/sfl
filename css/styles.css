@@ -624,8 +624,10 @@ body.fixed {
   align-items: flex-end;
   flex-shrink: 0;
 }
+
 .application__inner {
   display: flex;
+  align-items: center;
 }
 
 .application__group {
