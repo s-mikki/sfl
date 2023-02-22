@@ -33,6 +33,17 @@
 
 @font-face {
   font-family: "Inter";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local('Inter Bold'), local('Inter-Bold'),
+  url("../fonts/inter-bold.woff2") format("woff2"),
+  url("../fonts/inter-bold.woff") format("woff"),
+  url("../fonts/inter-bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Inter";
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -535,13 +546,6 @@ body.fixed {
   position: relative;
 }
 
-.portal__stripes {
-  position: absolute;
-  left: -110px;
-  bottom: 25px;
-  z-index: 1;
-}
-
 .portal__title {
   font-family: 'Unbounded', "Arial", sans-serif;
   font-weight: 500;
@@ -550,6 +554,13 @@ body.fixed {
   text-transform: uppercase;
   position: relative;
   z-index: 2;
+}
+
+.portal__stripes {
+  position: absolute;
+  left: -100px;
+  bottom: 30px;
+  z-index: 1;
 }
 
 .portal__group {
@@ -566,4 +577,84 @@ body.fixed {
 
 .portal__img {
   margin: 0 -50px 0 -90px;
+}
+
+.application {
+  font-family: 'Inter', "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.application__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.application__title {
+  font-family: 'Unbounded', "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 50px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.application__stripes {
+  position: absolute;
+  margin: 30px -530px 0 0;
+  z-index: 1;
+}
+
+.application__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  max-width: 100%;
+}
+
+.application__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.application__inner {
+  display: flex;
+}
+
+.application__group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.application__subtitle {
+  font-family: 'Inter', "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 30px;
+}
+
+.group__text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.application__inner .application__text {
+  max-width: 660px;
+}
+
+.application .button {
+  width: 310px;
+  height: 60px;
+  padding: 20px 15px;
+  font-size: 18px;
+  line-height: 20px;
 }
