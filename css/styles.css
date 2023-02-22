@@ -645,9 +645,6 @@ body.fixed {
   display: flex;
   flex-direction: column;
   gap: 5px;
-}
-
-.application__inner .application__text {
   max-width: 660px;
 }
 
