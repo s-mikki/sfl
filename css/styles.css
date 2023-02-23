@@ -246,7 +246,7 @@ body.fixed {
   margin: 0 auto;
   position: relative;
   max-width: 1920px;
-  font-family: "Unbounded", "Arial", sans-serif;
+  font-family: "inter", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -277,6 +277,7 @@ body.fixed {
 
 .navigation__link {
   display: flex;
+  font-family: "Unbounded", "Arial", sans-serif;
   font-size: 20px;
   line-height: 24px;
   padding: 15px 10px;
@@ -369,7 +370,6 @@ body.fixed {
 }
 
 .form__label {
-  font-family: 'Inter', "Arial", sans-serif;
   font-size: 12px;
   line-height: 15px;
 }
@@ -406,7 +406,6 @@ body.fixed {
 }
 
 .checkbox__label {
-  font-family: 'Inter', "Arial", sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 15px;
@@ -428,7 +427,6 @@ body.fixed {
 
 .form__sky {
   text-decoration: underline;
-  font-family: 'Inter', "Arial", sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 15px;
@@ -455,7 +453,6 @@ body.fixed {
 }
 
 .form__slogan {
-  font-family: 'Inter', "Arial", sans-serif;
   font-size: 12px;
   line-height: 15px;
   text-align: center;
@@ -470,7 +467,6 @@ body.fixed {
 }
 
 .promo__text {
-  font-family: 'Inter', "Arial", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -507,7 +503,6 @@ body.fixed {
 }
 
 .form__subtitle {
-  font-family: 'Inter', "Arial", sans-serif;
   font-weight: 300;
   font-size: 12px;
   line-height: 15px;
@@ -516,7 +511,6 @@ body.fixed {
 }
 
 .form__text {
-  font-family: 'Inter', "Arial", sans-serif;
   font-weight: 300;
   font-size: 10px;
   line-height: 14px;
@@ -542,11 +536,11 @@ body.fixed {
   flex-shrink: 0;
 }
 
-.portal__container {
+.title{
   position: relative;
 }
 
-.portal__title {
+.title__text {
   font-family: 'Unbounded', "Arial", sans-serif;
   font-weight: 500;
   font-size: 34px;
@@ -556,7 +550,7 @@ body.fixed {
   z-index: 2;
 }
 
-.portal__stripes {
+.title__stripes {
   position: absolute;
   left: -100px;
   bottom: 30px;
@@ -569,8 +563,7 @@ body.fixed {
   gap: 15px;
 }
 
-.portal__subtitle {
-  font-family: 'Inter', "Arial", sans-serif;
+.text {
   font-size: 18px;
   line-height: 24px;
 }
@@ -580,45 +573,31 @@ body.fixed {
 }
 
 .application {
-  font-family: 'Inter', "Arial", sans-serif;
   font-size: 18px;
   line-height: 22px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 30px;
 }
 
-.application__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+.title--center {
+  margin: 0 auto;
 }
 
-.application__title {
-  font-family: 'Unbounded', "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 50px;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 2;
+.title__stripes--blue {
+  left: 415px;
+  bottom: -30px;
 }
 
-.application__stripes {
-  position: absolute;
-  margin: 30px -530px 0 0;
-  z-index: 1;
-}
-
-.application__wrap {
+.application__list {
   display: flex;
   flex-direction: column;
   gap: 70px;
   max-width: 100%;
 }
 
-.application__content {
+.application__item {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -630,20 +609,21 @@ body.fixed {
   align-items: center;
 }
 
-.application__group {
+.application__content {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .application__subtitle {
-  font-family: 'Inter', "Arial", sans-serif;
   font-weight: 700;
   font-size: 28px;
   line-height: 30px;
+  text-transform: uppercase;
+
 }
 
-.group__text {
+.application__group {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -651,9 +631,8 @@ body.fixed {
 }
 
 .application .button {
-  width: 310px;
-  height: 60px;
-  padding: 20px 15px;
+  min-width: 310px;
+  min-height: 60px;
   font-size: 18px;
   line-height: 20px;
 }
