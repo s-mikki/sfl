@@ -37,9 +37,9 @@
   font-style: normal;
   font-display: swap;
   src: local('Inter Bold'), local('Inter-Bold'),
-  url("../fonts/fonts_inter/inter-bold.woff2") format("woff2"),
-  url("../fonts/fonts_inter/inter-bold.woff") format("woff"),
-  url("../fonts/fonts_inter/inter-bold.ttf") format("ttf");
+  url("../fonts/fonts-inter/inter-bold.woff2") format("woff2"),
+  url("../fonts/fonts-inter/inter-bold.woff") format("woff"),
+  url("../fonts/fonts-inter/inter-bold.ttf") format("ttf");
 }
 
 @font-face {
@@ -48,9 +48,9 @@
   font-style: normal;
   font-display: swap;
   src: local('Inter SemiBold'), local('Inter-SemiBold'),
-  url("../fonts/fonts_inter/inter-semibold.woff2") format("woff2"),
-  url("../fonts/fonts_inter/inter-semibold.woff") format("woff"),
-  url("../fonts/fonts_inter/inter-semibold.ttf") format("ttf");
+  url("../fonts/fonts-inter/inter-semibold.woff2") format("woff2"),
+  url("../fonts/fonts-inter/inter-semibold.woff") format("woff"),
+  url("../fonts/fonts-inter/inter-semibold.ttf") format("ttf");
 }
 
 @font-face {
@@ -59,9 +59,9 @@
   font-style: normal;
   font-display: swap;
   src: local('Inter Medium'), local('Inter-Medium'),
-  url("../fonts/fonts_inter/inter-medium.woff2") format("woff2"),
-  url("../fonts/fonts_inter/inter-medium.woff") format("woff"),
-  url("../fonts/fonts_inter/inter-medium.ttf") format("ttf");
+  url("../fonts/fonts-inter/inter-medium.woff2") format("woff2"),
+  url("../fonts/fonts-inter/inter-medium.woff") format("woff"),
+  url("../fonts/fonts-inter/inter-medium.ttf") format("ttf");
 }
 
 @font-face {
@@ -70,9 +70,9 @@
   font-style: normal;
   font-display: swap;
   src: local('Inter Regular'), local('Inter-Regular'),
-  url("../fonts/fonts_inter/inter-regular.woff2") format("woff2"),
-  url("../fonts/fonts_inter/inter-regular.woff") format("woff"),
-  url("../fonts/fonts_inter/inter-regular.ttf") format("ttf");
+  url("../fonts/fonts-inter/inter-regular.woff2") format("woff2"),
+  url("../fonts/fonts-inter/inter-regular.woff") format("woff"),
+  url("../fonts/fonts-inter/inter-regular.ttf") format("ttf");
 }
 
 @font-face {
@@ -81,9 +81,9 @@
   font-style: normal;
   font-display: swap;
   src: local('Inter Light'), local('Inter-Light'),
-  url("../fonts/fonts_inter/inter-light.woff2") format("woff2"),
-  url("../fonts/fonts_inter/inter-light.woff") format("woff"),
-  url("../fonts/fonts_inter/inter-light.ttf") format("ttf");
+  url("../fonts/fonts-inter/inter-light.woff2") format("woff2"),
+  url("../fonts/fonts-inter/inter-light.woff") format("woff"),
+  url("../fonts/fonts-inter/inter-light.ttf") format("ttf");
 }
 
 @font-face {
@@ -92,9 +92,9 @@
   font-style: normal;
   font-display: swap;
   src: local('OpenSans SemiBold'), local('OpenSans-SemiBold'),
-  url("../fonts/fonts_opensans/opensans-semibold.woff2") format("woff2"),
-  url("../fonts/fonts_opensans/opensans-semibold.woff") format("woff"),
-  url("../fonts/fonts_opensans/opensans-semibold.ttf") format("ttf");
+  url("../fonts/fonts-opensans/opensans-semibold.woff2") format("woff2"),
+  url("../fonts/fonts-opensans/opensans-semibold.woff") format("woff"),
+  url("../fonts/fonts-opensans/opensans-semibold.ttf") format("ttf");
 }
 
 @font-face {
@@ -103,9 +103,9 @@
   font-style: normal;
   font-display: swap;
   src: local('OpenSans SemiBold'), local('OpenSans-SemiBold'),
-  url("../fonts/fonts_opensans/opensans-semibold.woff2") format("woff2"),
-  url("../fonts/fonts_opensans/opensans-semibold.woff") format("woff"),
-  url("../fonts/fonts_opensans/opensans-semibold.ttf") format("ttf");
+  url("../fonts/fonts-opensans/opensans-semibold.woff2") format("woff2"),
+  url("../fonts/fonts-opensans/opensans-semibold.woff") format("woff"),
+  url("../fonts/fonts-opensans/opensans-semibold.ttf") format("ttf");
 }
 
 @font-face {
@@ -246,7 +246,7 @@ body.fixed {
   margin: 0 auto;
   position: relative;
   max-width: 1920px;
-  font-family: "inter", "Arial", sans-serif;
+  font-family: "Inter", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -420,7 +420,7 @@ body.fixed {
 }
 
 .checkbox__input:checked + .checkbox__indicator:after {
-  content: url("../images/images_svg/check.svg");
+  content: url("../images/images-svg/check.svg");
   position: absolute;
   left: 3px;
 }
@@ -445,6 +445,8 @@ body.fixed {
   align-items: center;
   padding: 10px 30px;
   gap: 5px;
+  font-size: 16px;
+  line-height: 15px;
   font-weight: 500;
   text-transform: uppercase;
   background-color: var(--green-blue);
@@ -586,7 +588,8 @@ body.fixed {
 }
 
 .title__stripes--blue {
-  left: 415px;
+  left: auto;
+  right: -115px;
   bottom: -30px;
 }
 
@@ -601,7 +604,6 @@ body.fixed {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  flex-shrink: 0;
 }
 
 .application__inner {
@@ -613,6 +615,10 @@ body.fixed {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-width: 660px;
+}
+.application__content--medium {
+  max-width: none;
 }
 
 .application__subtitle {
@@ -620,17 +626,15 @@ body.fixed {
   font-size: 28px;
   line-height: 30px;
   text-transform: uppercase;
-
 }
 
 .application__group {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  max-width: 660px;
 }
 
-.application .button {
+.button__medium {
   min-width: 310px;
   min-height: 60px;
   font-size: 18px;
