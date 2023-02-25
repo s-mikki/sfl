@@ -37,9 +37,9 @@
   font-style: normal;
   font-display: swap;
   src: local('Inter Bold'), local('Inter-Bold'),
-  url("../fonts/fonts-inter/inter-bold.woff2") format("woff2"),
-  url("../fonts/fonts-inter/inter-bold.woff") format("woff"),
-  url("../fonts/fonts-inter/inter-bold.ttf") format("ttf");
+  url("../fonts/inter/inter-bold.woff2") format("woff2"),
+  url("../fonts/inter/inter-bold.woff") format("woff"),
+  url("../fonts/inter/inter-bold.ttf") format("ttf");
 }
 
 @font-face {
@@ -48,9 +48,9 @@
   font-style: normal;
   font-display: swap;
   src: local('Inter SemiBold'), local('Inter-SemiBold'),
-  url("../fonts/fonts-inter/inter-semibold.woff2") format("woff2"),
-  url("../fonts/fonts-inter/inter-semibold.woff") format("woff"),
-  url("../fonts/fonts-inter/inter-semibold.ttf") format("ttf");
+  url("../fonts/inter/inter-semibold.woff2") format("woff2"),
+  url("../fonts/inter/inter-semibold.woff") format("woff"),
+  url("../fonts/inter/inter-semibold.ttf") format("ttf");
 }
 
 @font-face {
@@ -59,9 +59,9 @@
   font-style: normal;
   font-display: swap;
   src: local('Inter Medium'), local('Inter-Medium'),
-  url("../fonts/fonts-inter/inter-medium.woff2") format("woff2"),
-  url("../fonts/fonts-inter/inter-medium.woff") format("woff"),
-  url("../fonts/fonts-inter/inter-medium.ttf") format("ttf");
+  url("../fonts/inter/inter-medium.woff2") format("woff2"),
+  url("../fonts/inter/inter-medium.woff") format("woff"),
+  url("../fonts/inter/inter-medium.ttf") format("ttf");
 }
 
 @font-face {
@@ -70,9 +70,9 @@
   font-style: normal;
   font-display: swap;
   src: local('Inter Regular'), local('Inter-Regular'),
-  url("../fonts/fonts-inter/inter-regular.woff2") format("woff2"),
-  url("../fonts/fonts-inter/inter-regular.woff") format("woff"),
-  url("../fonts/fonts-inter/inter-regular.ttf") format("ttf");
+  url("../fonts/inter/inter-regular.woff2") format("woff2"),
+  url("../fonts/inter/inter-regular.woff") format("woff"),
+  url("../fonts/inter/inter-regular.ttf") format("ttf");
 }
 
 @font-face {
@@ -81,9 +81,9 @@
   font-style: normal;
   font-display: swap;
   src: local('Inter Light'), local('Inter-Light'),
-  url("../fonts/fonts-inter/inter-light.woff2") format("woff2"),
-  url("../fonts/fonts-inter/inter-light.woff") format("woff"),
-  url("../fonts/fonts-inter/inter-light.ttf") format("ttf");
+  url("../fonts/inter/inter-light.woff2") format("woff2"),
+  url("../fonts/inter/inter-light.woff") format("woff"),
+  url("../fonts/inter/inter-light.ttf") format("ttf");
 }
 
 @font-face {
@@ -92,9 +92,9 @@
   font-style: normal;
   font-display: swap;
   src: local('OpenSans SemiBold'), local('OpenSans-SemiBold'),
-  url("../fonts/fonts-opensans/opensans-semibold.woff2") format("woff2"),
-  url("../fonts/fonts-opensans/opensans-semibold.woff") format("woff"),
-  url("../fonts/fonts-opensans/opensans-semibold.ttf") format("ttf");
+  url("../fonts/opensans/opensans-semibold.woff2") format("woff2"),
+  url("../fonts/opensans/opensans-semibold.woff") format("woff"),
+  url("../fonts/opensans/opensans-semibold.ttf") format("ttf");
 }
 
 @font-face {
@@ -103,9 +103,9 @@
   font-style: normal;
   font-display: swap;
   src: local('OpenSans SemiBold'), local('OpenSans-SemiBold'),
-  url("../fonts/fonts-opensans/opensans-semibold.woff2") format("woff2"),
-  url("../fonts/fonts-opensans/opensans-semibold.woff") format("woff"),
-  url("../fonts/fonts-opensans/opensans-semibold.ttf") format("ttf");
+  url("../fonts/opensans/opensans-semibold.woff2") format("woff2"),
+  url("../fonts/opensans/opensans-semibold.woff") format("woff"),
+  url("../fonts/opensans/opensans-semibold.ttf") format("ttf");
 }
 
 @font-face {
@@ -252,7 +252,7 @@ body.fixed {
   line-height: 18px;
   color: var(--white);
   background-color: var(--blue);
-  background-image: url("../images/images-png/background-body.png ");
+  background-image: url("../img/images-png/background-body.png ");
   z-index: 9999;
 }
 
@@ -420,7 +420,7 @@ body.fixed {
 }
 
 .checkbox__input:checked + .checkbox__indicator:after {
-  content: url("../images/images-svg/check.svg");
+  content: url("../img/images-svg/check.svg");
   position: absolute;
   left: 3px;
 }
@@ -617,7 +617,7 @@ body.fixed {
   gap: 10px;
   max-width: 660px;
 }
-.application__content--medium {
+.application__content--full {
   max-width: none;
 }
 
@@ -634,9 +634,10 @@ body.fixed {
   gap: 5px;
 }
 
-.button__medium {
+.button--big {
   min-width: 310px;
   min-height: 60px;
   font-size: 18px;
   line-height: 20px;
+  padding: 0;
 }
