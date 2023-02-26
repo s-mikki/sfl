@@ -300,6 +300,7 @@ body.fixed {
   margin: 0 auto;
   width: 100%;
   padding: 0 30px;
+  gap: 100px;
 }
 
 .promo {
@@ -468,7 +469,7 @@ body.fixed {
   margin: 10px 0 0;
 }
 
-.promo__text {
+.text--promo {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -639,5 +640,46 @@ body.fixed {
   min-height: 60px;
   font-size: 18px;
   line-height: 20px;
-  padding: 0;
+  padding: 10px 10px;
+}
+
+.document {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.title__stripes--left {
+  left: -128px;
+}
+
+.document__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.document__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  min-width: 738px;
+}
+
+.document__item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 25px;
+  gap: 60px;
+  color: var(--dark);
+  background-color: var(--white);
+}
+
+.text--document {
+  font-weight: 500;
+  max-width: 418px;
+}
+
+.button--document {
+  min-width: 210px;
+  min-height: 50px;
 }
