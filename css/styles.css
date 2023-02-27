@@ -280,7 +280,7 @@ body.fixed {
   font-family: "Unbounded", "Arial", sans-serif;
   font-size: 20px;
   line-height: 24px;
-  padding: 15px 10px;
+  padding: 20px 15px;
   font-weight: 500;
 }
 
@@ -300,7 +300,7 @@ body.fixed {
   margin: 0 auto;
   width: 100%;
   padding: 0 30px;
-  gap: 100px;
+  gap: 80px;
 }
 
 .promo {
@@ -462,17 +462,15 @@ body.fixed {
   color: var(--dark);
 }
 
-.promo__mail {
+.social {
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 10px 0 0;
 }
 
-.text--promo {
+.text--bold {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
 }
 
 .form__wrap {
@@ -576,8 +574,6 @@ body.fixed {
 }
 
 .application {
-  font-size: 18px;
-  line-height: 22px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -662,24 +658,28 @@ body.fixed {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  min-width: 738px;
+  max-width: 738px;
 }
 
 .document__item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding: 20px 25px;
   gap: 60px;
-  color: var(--dark);
   background-color: var(--white);
 }
 
-.text--document {
-  font-weight: 500;
-  max-width: 418px;
+.text--black {
+  color: var(--dark);
 }
 
-.button--document {
+.document__img {
+  margin: -46px 0 0 0;
+}
+
+.button--middle {
   min-width: 210px;
   min-height: 50px;
 }
+
+
