@@ -252,7 +252,7 @@ body.fixed {
   line-height: 18px;
   color: var(--white);
   background-color: var(--blue);
-  background-image: url("../img/images-png/background-body.png ");
+  background-image: url("../img/images-png/background-body.png");
   z-index: 9999;
 }
 
@@ -280,7 +280,7 @@ body.fixed {
   font-family: "Unbounded", "Arial", sans-serif;
   font-size: 20px;
   line-height: 24px;
-  padding: 20px 15px;
+  padding: 15px 10px;
   font-weight: 500;
 }
 
